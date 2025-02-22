@@ -1,0 +1,548 @@
+{
+    "frontend": [
+        {
+            "structure": "frontend/",
+            "details": [
+                "public/",
+                "├── index.html",
+                "├── favicon.ico",
+                "src/",
+                "├── components/",
+                "│   └── MessageList.js",
+                "├── App.js",
+                "├── index.js",
+                "├── styles.css",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "frontend/",
+            "details": [
+                "assets/",
+                "├── images/",
+                "├── styles/",
+                "components/",
+                "├── Header.js",
+                "├── Footer.js",
+                "pages/",
+                "├── Home.js",
+                "├── About.js",
+                "App.js",
+                "index.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "frontend/",
+            "details": [
+                "public/",
+                "├── index.html",
+                "├── manifest.json",
+                "src/",
+                "├── api/",
+                "│   └── api.js",
+                "├── hooks/",
+                "│   └── useFetch.js",
+                "├── context/",
+                "│   └── AuthContext.js",
+                "├── App.js",
+                "├── index.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "frontend/",
+            "details": [
+                "public/",
+                "├── index.html",
+                "src/",
+                "├── layouts/",
+                "│   └── MainLayout.js",
+                "├── utils/",
+                "│   └── helpers.js",
+                "├── redux/",
+                "│   ├── slices/",
+                "│   │   └── userSlice.js",
+                "│   └── store.js",
+                "├── App.js",
+                "├── index.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "frontend/",
+            "details": [
+                "public/",
+                "├── index.html",
+                "src/",
+                "├── services/",
+                "│   └── authService.js",
+                "├── constants/",
+                "│   └── routes.js",
+                "├── hooks/",
+                "│   └── useAuth.js",
+                "├── App.js",
+                "├── index.js",
+                "package.json"
+            ]
+        }
+    ],
+    "backend": [
+        {
+            "structure": "backend/",
+            "details": [
+                "controllers/",
+                "├── userController.js",
+                "models/",
+                "├── userModel.js",
+                "routes/",
+                "├── userRoutes.js",
+                "config/",
+                "├── database.js",
+                "server.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "backend/",
+            "details": [
+                "src/",
+                "├── app.py",
+                "├── routes/",
+                "│   ├── auth.py",
+                "│   ├── users.py",
+                "├── models/",
+                "│   ├── user.py",
+                "config/",
+                "├── settings.py",
+                "main.py",
+                "requirements.txt"
+            ]
+        },
+        {
+            "structure": "backend/",
+            "details": [
+                "app/",
+                "├── controllers/",
+                "│   └── productController.js",
+                "├── models/",
+                "│   └── productModel.js",
+                "├── routes/",
+                "│   └── productRoutes.js",
+                "config/",
+                "├── db.js",
+                "server.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "backend/",
+            "details": [
+                "src/",
+                "├── main.go",
+                "├── handlers/",
+                "│   └── userHandler.go",
+                "├── models/",
+                "│   └── user.go",
+                "├── routes/",
+                "│   └── routes.go",
+                "go.mod",
+                "go.sum"
+            ]
+        },
+        {
+            "structure": "backend/",
+            "details": [
+                "app/",
+                "├── middleware/",
+                "│   └── authMiddleware.js",
+                "├── utils/",
+                "│   └── logger.js",
+                "├── controllers/",
+                "│   └── orderController.js",
+                "├── models/",
+                "│   └── orderModel.js",
+                "server.js",
+                "package.json"
+            ]
+        }
+    ],
+    "data science": [
+        {
+            "structure": "data_science/",
+            "details": [
+                "notebooks/",
+                "├── analysis.ipynb",
+                "├── visualization.ipynb",
+                "datasets/",
+                "├── raw/",
+                "├── processed/",
+                "scripts/",
+                "├── preprocessing.py",
+                "├── train_model.py",
+                "models/",
+                "├── model.pkl",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "data_science/",
+            "details": [
+                "experiments/",
+                "├── experiment_1/",
+                "│   ├── config.yaml",
+                "│   ├── results.csv",
+                "data/",
+                "├── raw/",
+                "├── cleaned/",
+                "notebooks/",
+                "├── EDA.ipynb",
+                "scripts/",
+                "├── feature_engineering.py",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "data_science/",
+            "details": [
+                "data/",
+                "├── raw/",
+                "├── processed/",
+                "models/",
+                "├── model_v1.pkl",
+                "├── model_v2.pkl",
+                "notebooks/",
+                "├── model_training.ipynb",
+                "scripts/",
+                "├── evaluate_model.py",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "data_science/",
+            "details": [
+                "data/",
+                "├── external/",
+                "├── interim/",
+                "notebooks/",
+                "├── data_cleaning.ipynb",
+                "scripts/",
+                "├── data_pipeline.py",
+                "models/",
+                "├── final_model.pkl",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "data_science/",
+            "details": [
+                "data/",
+                "├── raw/",
+                "├── processed/",
+                "notebooks/",
+                "├── feature_selection.ipynb",
+                "scripts/",
+                "├── train.py",
+                "models/",
+                "├── best_model.pkl",
+                "README.md"
+            ]
+        }
+    ],
+    "c project": [
+        {
+            "structure": "c_project/",
+            "details": [
+                "src/",
+                "├── main.c",
+                "├── utils.c",
+                "include/",
+                "├── utils.h",
+                "Makefile",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "c_project/",
+            "details": [
+                "src/",
+                "├── main.c",
+                "├── math_utils.c",
+                "include/",
+                "├── math_utils.h",
+                "bin/",
+                "├── output",
+                "Makefile",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "c_project/",
+            "details": [
+                "src/",
+                "├── main.c",
+                "├── linked_list.c",
+                "include/",
+                "├── linked_list.h",
+                "tests/",
+                "├── test_linked_list.c",
+                "Makefile",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "c_project/",
+            "details": [
+                "src/",
+                "├── main.c",
+                "├── sort.c",
+                "include/",
+                "├── sort.h",
+                "bin/",
+                "├── output",
+                "Makefile",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "c_project/",
+            "details": [
+                "src/",
+                "├── main.c",
+                "├── file_io.c",
+                "include/",
+                "├── file_io.h",
+                "data/",
+                "├── input.txt",
+                "Makefile",
+                "README.md"
+            ]
+        }
+    ],
+    "cpp project": [
+        {
+            "structure": "cpp_project/",
+            "details": [
+                "src/",
+                "├── main.cpp",
+                "├── utils.cpp",
+                "include/",
+                "├── utils.h",
+                "CMakeLists.txt",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "cpp_project/",
+            "details": [
+                "src/",
+                "├── main.cpp",
+                "├── matrix_ops.cpp",
+                "include/",
+                "├── matrix_ops.h",
+                "tests/",
+                "├── test_matrix_ops.cpp",
+                "CMakeLists.txt",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "cpp_project/",
+            "details": [
+                "src/",
+                "├── main.cpp",
+                "├── graph.cpp",
+                "include/",
+                "├── graph.h",
+                "bin/",
+                "├── output",
+                "CMakeLists.txt",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "cpp_project/",
+            "details": [
+                "src/",
+                "├── main.cpp",
+                "├── neural_network.cpp",
+                "include/",
+                "├── neural_network.h",
+                "data/",
+                "├── dataset.csv",
+                "CMakeLists.txt",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "cpp_project/",
+            "details": [
+                "src/",
+                "├── main.cpp",
+                "├── game_engine.cpp",
+                "include/",
+                "├── game_engine.h",
+                "assets/",
+                "├── textures/",
+                "CMakeLists.txt",
+                "README.md"
+            ]
+        }
+    ],
+    "mobile app": [
+        {
+            "structure": "mobile_app/",
+            "details": [
+                "android/",
+                "ios/",
+                "lib/",
+                "├── screens/",
+                "│   ├── home_screen.dart",
+                "│   ├── profile_screen.dart",
+                "├── widgets/",
+                "│   ├── custom_button.dart",
+                "├── main.dart",
+                "pubspec.yaml"
+            ]
+        },
+        {
+            "structure": "mobile_app/",
+            "details": [
+                "src/",
+                "├── components/",
+                "│   ├── Header.js",
+                "│   ├── Footer.js",
+                "├── screens/",
+                "│   ├── HomeScreen.js",
+                "│   ├── DetailsScreen.js",
+                "├── App.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "mobile_app/",
+            "details": [
+                "android/",
+                "ios/",
+                "lib/",
+                "├── models/",
+                "│   ├── user_model.dart",
+                "├── services/",
+                "│   ├── api_service.dart",
+                "├── main.dart",
+                "pubspec.yaml"
+            ]
+        },
+        {
+            "structure": "mobile_app/",
+            "details": [
+                "src/",
+                "├── assets/",
+                "│   ├── images/",
+                "│   ├── fonts/",
+                "├── navigation/",
+                "│   ├── AppNavigator.js",
+                "├── screens/",
+                "│   ├── LoginScreen.js",
+                "│   ├── DashboardScreen.js",
+                "App.js",
+                "package.json"
+            ]
+        },
+        {
+            "structure": "mobile_app/",
+            "details": [
+                "android/",
+                "ios/",
+                "lib/",
+                "├── state/",
+                "│   ├── app_state.dart",
+                "├── utils/",
+                "│   ├── constants.dart",
+                "├── main.dart",
+                "pubspec.yaml"
+            ]
+        }
+    ],
+    "machine learning": [
+        {
+            "structure": "machine_learning/",
+            "details": [
+                "notebooks/",
+                "├── data_exploration.ipynb",
+                "├── model_training.ipynb",
+                "data/",
+                "├── raw/",
+                "├── processed/",
+                "models/",
+                "├── model.pkl",
+                "scripts/",
+                "├── preprocess.py",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "machine_learning/",
+            "details": [
+                "experiments/",
+                "├── experiment_1/",
+                "│   ├── config.yaml",
+                "│   ├── results.csv",
+                "data/",
+                "├── raw/",
+                "├── cleaned/",
+                "notebooks/",
+                "├── EDA.ipynb",
+                "scripts/",
+                "├── train.py",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "machine_learning/",
+            "details": [
+                "data/",
+                "├── raw/",
+                "├── processed/",
+                "models/",
+                "├── model_v1.pkl",
+                "├── model_v2.pkl",
+                "notebooks/",
+                "├── model_evaluation.ipynb",
+                "scripts/",
+                "├── evaluate.py",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "machine_learning/",
+            "details": [
+                "data/",
+                "├── external/",
+                "├── interim/",
+                "notebooks/",
+                "├── feature_engineering.ipynb",
+                "scripts/",
+                "├── pipeline.py",
+                "models/",
+                "├── final_model.pkl",
+                "README.md"
+            ]
+        },
+        {
+            "structure": "machine_learning/",
+            "details": [
+                "data/",
+                "├── raw/",
+                "├── processed/",
+                "notebooks/",
+                "├── hyperparameter_tuning.ipynb",
+                "scripts/",
+                "├── train.py",
+                "models/",
+                "├── best_model.pkl",
+                "README.md"
+            ]
+        }
+    ]
+}
