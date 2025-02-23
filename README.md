@@ -1,80 +1,75 @@
-# 🤖 Friday: AI-Powered Coding Assistant
+# FRIDAY - Your Personal AI Assistant 🤖
 
-## 📝 Project Description
+**FRIDAY** is an AI-powered personal assistant capable of understanding voice and text commands, executing system functions, fetching web data, and assisting in various tasks such as playing music, taking screenshots, and even creating project structures.
 
-**Friday** is an AI-powered voice assistant tailored specifically for coders. It assists with coding-related challenges such as:
+## 🚀 Features
 
-- 🔍 Finding syntax for basic pages or applications.
-- 📂 Providing guidance on folder structure for projects.
-- 📋 Allowing users to copy code snippets from lectures for easy implementation.
-- ⚡ Automating coding tasks to enhance productivity.
+- 🎤 **Voice Recognition & Text Input**: Accepts commands through both voice and text.
+- 🔊 **Text-to-Speech (TTS)**: Provides audio feedback using `pyttsx3`.
+- 🧠 **NLP-Powered Command Processing**: Uses `Spacy` and fuzzy matching to understand commands.
+- 📚 **Customizable Learning Mode**: Stores past user interactions to improve response accuracy.
+- 🖥️ **System Control**: Can adjust volume, take screenshots, open camera, and perform system shutdowns.
+- 🌍 **Web Search & Automation**: Fetches Google summaries, plays music from YouTube, and opens web pages.
+- 🏗️ **Project Structure Generator**: Helps create structured project directories for different development categories.
 
-## 🌟 Overview
+## 🔧 Installation
 
-Friday leverages **speech recognition**, **text-to-speech synthesis**, and **automation libraries** to offer an interactive and hands-free coding assistant. It aims to streamline development by minimizing repetitive tasks and providing quick access to essential coding resources.
+### Prerequisites
 
-## 🚀 Key Features
+Ensure you have the following installed on your system:
 
-### 🎙️ Voice Interaction
-- 🗣️ Uses `pyttsx3` for text-to-speech output.
-- 🎧 Uses `speech_recognition` for processing user commands.
+- 🐍 Python 3.x
+- 📦 Required Python libraries:
+  ```sh
+  pip install pyttsx3 SpeechRecognition opencv-python pyautogui pywhatkit fuzzywuzzy beautifulsoup4 requests spacy
+  ```
+- 📥 Download the English NLP model for Spacy:
+  ```sh
+  python -m spacy download en_core_web_sm
+  ```
 
-### 💻 Coding Assistance
-- 📜 Provides syntax for commonly used programming constructs.
-- 📂 Suggests folder structures for different projects (Web, App, Machine Learning, etc.).
-- 📋 Enables copying code from lectures for direct implementation.
+## ▶️ How to Run
 
-### 🖥️ System Operations
-- ⏰ Provides greetings based on the time of day.
-- 🛑 Controls system functionalities such as:
-  - 🔄 Shutdown, Restart, Lock, Hibernate the system.
-  - 📝 Open/Close coding applications like VS Code, Terminal, and Notepad++.
-  - 🔊 Adjust volume (Increase, Decrease).
-  - 🗒️ Take notes in Notepad and Sticky Notes.
+1. Run the script:
+   ```sh
+   python FRIDAY.py
+   ```
+2. FRIDAY will greet you and ask if you want to enable learning mode.
+3. Say or type **"Wake up"** to activate FRIDAY.
+4. Give commands such as:
+   - 🕒 "What is the time?"
+   - 🔍 "Open Google"
+   - 📸 "Take a screenshot"
+   - 🏗️ "Create project"
+5. Say **"Go to sleep"** to deactivate FRIDAY until needed again.
 
-### 🌐 Web Automation for Coding Resources
-- 🔍 Searches for code snippets and syntax references on **Stack Overflow** and documentation sites.
-- 📄 Summarizes search results using `BeautifulSoup`.
-- 🌍 Opens and controls browser tabs for coding resources.
+## 🗂️ Available Commands
 
-### 🎥 Media Control
-- ▶️ Plays coding tutorial videos from **YouTube**.
-- 📂 Opens saved local tutorials.
-- 📸 Takes screenshots and saves them with a user-defined name.
+- ⏰ **"Time"**, 📅 **"Date"**, 📆 **"Day"** - Fetches the current time, date, or day.
+- 🎵 **"Play music"** - Plays a song on YouTube.
+- 🔍 **"Open Google"** - Opens a Google search with a spoken query.
+- 📸 **"Take screenshot"** - Captures and saves a screenshot.
+- 🎥 **"Open camera"** - Opens the system camera.
+- 🔊 **"Increase volume"**, 🔉 **"Decrease volume"** - Adjusts system volume.
+- 🏗️ **"Create project"** - Assists in creating structured project directories.
+- 💻 **"Shutdown laptop"**, 🔄 **"Restart laptop"**, 🔒 **"Lock laptop"** - System control commands.
+- 🚀 **And many more!**
 
-### 🤖 Automation & Navigation
-- 🖱️ Uses `pyautogui` for:
-  - 🔄 Navigating between applications.
-  - ⌨️ Automating typing for repetitive code.
-  - 🏄 Handling browser tabs (Open, Close, Switch).
-- 🌍 Retrieves system’s IP address using `requests`.
+## 🧠 Learning Mode
 
-### 🌍 Chrome Automation
-- 📂 Opens Chrome and automates searches for coding-related topics.
-- 🏗️ Creates and manages multiple tabs and windows.
+FRIDAY can store past interactions to improve command recognition. Enable or disable this feature at startup.
 
-## 🛠️ Technology Stack
+## ⚙️ Customization
 
-**Programming Language:** Python 🐍
+- Modify or add commands in the `commands` dictionary in `FRIDAY.py`.
+- Adjust TTS settings (voice and rate) in `engine.setProperty()`.
 
-**Libraries Used:**
-- 🗣️ `pyttsx3` (Text-to-Speech)
-- 🎧 `speech_recognition` (Voice Commands)
-- 🖱️ `pyautogui` (GUI Automation)
-- 🌍 `webbrowser` (Opening Web Pages)
-- 📄 `BeautifulSoup` (Web Scraping)
-- 🌍 `requests` (Fetching IP Addresses)
-- 🎥 `cv2` (OpenCV for Camera Control)
-- ⚙️ `os` and `time` (System Operations)
-- 🔍 `pywhatkit` (YouTube and Google Searches)
-- 🕵️‍♂️ `selenium`
+## 📜 License
 
-## 💡 Use Case Scenarios
+This project is open-source and free to use. Modify and distribute as needed!
 
-- 🖥️ Hands-free coding assistance for faster development.
-- 📚 Quick access to syntax references and code snippets.
-- 🔄 Automating repetitive coding tasks.
-- 🎙️ Controlling IDEs and terminals via voice commands.
-- ⚡ Enhancing productivity by reducing manual search efforts.
+---
 
-🚀 **Friday is here to make coding smarter, faster, and hands-free!** 🎉
+Developed with ❤️ by MANVIT M DESHMUKH
+
+
