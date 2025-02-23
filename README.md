@@ -70,6 +70,6 @@ This project is open-source and free to use. Modify and distribute as needed!
 
 ---
 
-Developed with ❤️ by MANVIT M DESHMUKH
+Developed with ❤️ by MANVIT M DESHMUKH , SAHIL PATHAK , HARSHAL RASODA
 
 
