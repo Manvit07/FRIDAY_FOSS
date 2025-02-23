@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 import requests
 import webbrowser
 import random
-#=========================================================NLP & LEARNING MODE========================================================================#
+import threading
 
 # Load the English NLP model
 nlp = spacy.load("en_core_web_sm")
@@ -52,13 +52,11 @@ def process_command(user_query):
         response = f"Executing {matched_command}"
         speak(response)
         commands[matched_command]()
-
         if LEARNING_MODE:
             store_interaction(user_query, matched_command)
     else:
         response = "Sorry, I didn't understand that command."
         speak(response)
-
         if LEARNING_MODE:
             store_interaction(user_query, "Unknown")
 
@@ -68,7 +66,7 @@ voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 engine.setProperty('rate', 200)
 
-use_voice = False  # Default mode is Voice Input
+use_voice = True  # Default mode is Voice Input
 
 def speak(audio):
     engine.say(audio)
@@ -81,7 +79,6 @@ def switch_input_mode():
     mode = "voice mode" if use_voice else "manual typing mode"
     speak(f"Switched to {mode}.")
     print(f"Mode changed: {mode}")
-
 
 def takeCommand():
     """Takes user input either by voice or manual typing based on mode."""
@@ -108,12 +105,10 @@ def takeCommand():
         return query
 
 # Data Storage Functions
-
 def store_interaction(user_input, system_response):
     """Stores user commands and system responses for learning."""
     data = load_past_interactions()
     data[user_input] = system_response
-
     with open("data.json", "w") as file:
         json.dump(data, file, indent=4)
 
@@ -124,10 +119,7 @@ def load_past_interactions():
             return json.load(file)
     return {}
 
-#=========================================================NLP & LEARNING MODE========================================================================#
-
 # Functionalities
-
 def get_time():
     return datetime.datetime.now().strftime("%H:%M")
 
@@ -200,8 +192,38 @@ def volume_down():
     for _ in range(5):
         pyautogui.press("volumedown")
 
+def create_project():
+    """Handles user input to create a project directory structure."""
+    speak("Which type of project structure do you need?")
+    print("Enter the project structure category 1) frontend, 2) backend, 3) data science, 4) machine learning, 5) mobile app, 6) cpp project, 7) c project")
+    speak("Enter the project structure category 1) frontend, 2) backend, 3) data science, 4) machine learning, 5) mobile app, 6) cpp project, 7) c project")
+    category = takeCommand().lower()
 
-#==========================================================================file_structure=================================================================#
+    if category in project_structures:
+        while True:
+            structure_details = get_random_structure(category)
+            if not structure_details:
+                speak("Sorry, no structures available for this category.")
+                return
+            
+            speak("Should I create the following project structure?")
+            print("\n".join(structure_details))
+            
+            speak("Say yes to create it or no to see another option.")
+            user_response = takeCommand().lower()
+            
+            if "yes" in user_response:
+                create_project_structure_from_text("my_project", structure_details)
+                speak("Project has been successfully created.")
+                break
+            elif "no" in user_response:
+                speak("Here is another option.")
+                continue
+            else:
+                speak("Invalid response. Cancelling operation.")
+                break
+    else:
+        speak("Invalid category. Please try again.")
 
 def create_project_structure_from_text(base_dir, structure_details):
     """Parses a formatted structure list and creates directories and files accordingly."""
@@ -241,44 +263,8 @@ def get_random_structure(category):
         return random.choice(structures)["details"]
     return None
 
-def create_project():
-    """Handles user input to create a project directory structure."""
-    speak("Which type of project structure do you need?")
-    print("Enter the project structure category 1) frontend, 2) backend, 3) data science, 4) machine learning, 5) mobile app, 6) cpp project, 7) c project")
-    speak("Enter the project structure category 1) frontend, 2) backend, 3) data science, 4) machine learning, 5) mobile app, 6) cpp project, 7) c project")
-    category = takeCommand().lower()
-
-    if category in project_structures:
-        while True:
-            structure_details = get_random_structure(category)
-            if not structure_details:
-                speak("Sorry, no structures available for this category.")
-                return
-            
-            speak("Should I create the following project structure?")
-            print("\n".join(structure_details))
-            
-            speak("Say yes to create it or no to see another option.")
-            user_response = takeCommand().lower()
-            
-            if "yes" in user_response:
-                create_project_structure_from_text("my_project", structure_details)
-                speak("Project has been successfully created.")
-                break
-            elif "no" in user_response:
-                speak("Here is another option.")
-                continue
-            else:
-                speak("Invalid response. Cancelling operation.")
-                break
-    else:
-        speak("Invalid category. Please try again.")
-
 # Load project structures from JSON file
 project_structures = load_project_structures()
-
-
-#==========================================================================file_structure=================================================================#
 
 commands = {
     "switch mode": switch_input_mode,  # Command to change mode
@@ -329,4 +315,4 @@ if __name__ == "__main__":
                 if query in commands:
                     commands[query]()  
                 else:
-                    process_command(query) 
+                    process_command(query)
